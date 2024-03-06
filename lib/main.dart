@@ -28,9 +28,14 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.orange,
+        toolbarHeight: 100,
+        backgroundColor: Colors.deepOrange,
+        foregroundColor: Colors.white,
         centerTitle: true,
-        title: const Text('Segundo App em Flutter'),
+        title: const Text(
+          'Segundo App em Flutter',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
       ),
       body: Container(
         decoration: const BoxDecoration(
@@ -41,13 +46,14 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       bottomSheet: Container(
         height: 50,
-        color: Colors.orange,
+        color: Colors.deepOrange,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.white,
+        shape: const CircleBorder(),
         onPressed: () {},
-        child: const Icon(Icons.history, color: Colors.orange),
+        child: const Icon(Icons.history, color: Colors.deepOrange),
       ),
     );
   }
